@@ -15,6 +15,7 @@
                 class="sapUiSmallMarginEnd"/>
             <Button
                 text="{i18n>showHelloButtonText}"
+                icon="sap-icon://SAP-icons-TNT/manual-task"
                 press=".onShowHello"
                 class="myCustomButton"/>
             <Input
