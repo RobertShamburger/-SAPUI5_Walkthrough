@@ -2,7 +2,7 @@
     "Invoices": [
     {
         "ProductName": "Pineapple",
-        "Quantitiy": 21,
+        "Quantity": 21,
         "ExtendedPrice": 87.2000,
         "ShipperName": "Fun Inc.",
         "ShippedDate": "2015-04-01T00:00:00",
@@ -10,7 +10,7 @@
     },
     {
         "ProductName": "Milk",
-        "Quantitiy": 4,
+        "Quantity": 4,
       "ExtendedPrice": 9.99999,
       "ShipperName": "ACME",
       "ShippedDate": "2015-02-18T00:00:00",
