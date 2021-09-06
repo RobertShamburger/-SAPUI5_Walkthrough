@@ -6,7 +6,6 @@ sap.ui.define([
     "use strict";
 
     return Controller.extend("sap.ui.demo.walkthrough.controller.HelloPanel", {
-
         onShowHello : function () {
             // read msg from i18n model
             var oBundle = this.getView().getModel("i18n").getResourceBundle();
@@ -15,7 +14,7 @@ sap.ui.define([
 
             // show message
             MessageToast.show(sMsg);
-        }
+        },
         onOpenDialog : function () {
             var oView = this.getView();
 
@@ -30,7 +29,7 @@ sap.ui.define([
                     return oDialog;
                 });
             }
-            this.pDialog.then(function(oDialog) {
+            this.pDialog.then(function (oDialog) {
                 oDialog.open();
             });
         }
