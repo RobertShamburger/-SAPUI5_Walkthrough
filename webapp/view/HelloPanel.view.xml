@@ -14,7 +14,7 @@
                 press=".onOpenDialog"
                 class="sapUiSmallMarginEnd"/>
             <Button
-                icon="sap-icon://SAP-icons-TNT/manual-task"
+                icon="sap-icon://theater"
                 text="{i18n>showHelloButtonText}"
                 press=".onShowHello"
                 class="myCustomButton"/>
