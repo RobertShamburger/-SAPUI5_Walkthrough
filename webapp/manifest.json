@@ -28,7 +28,6 @@
         "rootView": {
             "viewName": "sap.ui.demo.walkthrough.view.App",
             "type": "XML",
-            "async": true,
             "id": "app"
         },
         "dependencies": {
@@ -36,9 +35,6 @@
             "libs": {
                 "sap.m": {}
             }
-        },
-        "config": {
-            "invoiceLocal": "/Invoices.json"
         },
         "models": {
             "i18n": {
