@@ -10,7 +10,7 @@ sap.ui.define([
             var oMockServer = new MockServer({
                 rootUri: "https://service.odata.org/V2/Northwind/Northwind.svc/"
         });
-        var UriParameters = new UriParameters(window.location.href);
+        var oUriParameters = new UriParameters(window.location.href);
         
         // configure mock server with a delay
         MockServer.config({
