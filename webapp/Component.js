@@ -25,6 +25,7 @@ sap.ui.define([
             this.setModel(oModel);
             // set dialog
             this._helloDialog = new HelloDialog(this.getRootControl());
+            this._InvoiceList = new InvoiceList(this.getRootControl());
         },
         exit : function() {
             this._helloDialog.destroy();
