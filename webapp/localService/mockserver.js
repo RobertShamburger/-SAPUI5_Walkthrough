@@ -13,7 +13,7 @@ sap.ui.define([
         var oUriParameters = new UriParameters(window.location.href);
         
         // configure mock server with a delay
-        MockServer.config({
+        oMockServer.config({
             autoRespond: true,
             autoRespondAfter: oUriParameters.get("serverDelay") || 500
         });
