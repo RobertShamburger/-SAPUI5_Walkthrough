@@ -26,8 +26,7 @@ sap.ui.define([
             // set dialog
             this.rootControlLoaded().then(function () {
                 this._helloDialog = new HelloDialog(this.getRootControl());
-            }
-                .bind(this));
+            }.bind(this));
         },
         exit: function () {
             this._helloDialog.destroy();
