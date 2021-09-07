@@ -7,5 +7,5 @@ sap.ui.define([
    mockserver.init();
    
    // initialize the embedded component on the HTML page
-   sap.ui.require{["sap/ui/core/componentSupport"]);
+   sap.ui.require(["sap/ui/core/componentSupport"]);
 });
