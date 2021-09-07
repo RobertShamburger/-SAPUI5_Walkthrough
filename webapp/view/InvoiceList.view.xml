@@ -10,8 +10,7 @@
     <items>
         <ObjectListItem 
             title="{invoice>Quantity} x {invoice>ProductName}"
-            number="{invoice>ExtendedPrice}"
-            numberUnit="{view>/currency}"/>
+            number="{invoice>ExtendedPrice}"/>
     </items>
   </List>
 </mvc:View>
