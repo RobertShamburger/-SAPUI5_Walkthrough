@@ -8,7 +8,7 @@ sap.ui.define([
         init: function () {
             // createDocumentFragment
             var oMockServer = new MockServer({
-                rootUri: "https://service.odata.org/V2/Northwind/Northwind.svc/"
+                rootUri: "https://services.odata.org/V2/Northwind/Northwind.svc/"
         });
         var oUriParameters = UriParameters.fromQuery(window.location.search);
         
