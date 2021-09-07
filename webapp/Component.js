@@ -27,7 +27,7 @@ sap.ui.define([
             // set dialog
             this.rootControlLoaded().then(function () {
                 this._helloDialog = new HelloDialog(this.getRootControl());
-                this._invoiceList = new InvoiceList(this.getRootControl());
+                this._invoiceList = new InvoiceList();
             }.bind(this));
         },
         exit: function () {
