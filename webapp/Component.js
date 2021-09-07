@@ -1,7 +1,8 @@
 sap.ui.define([
         "sap/ui/core/UIComponent",
         "sap/ui/model/json/JSONModel",
-        "./controller/HelloDialog"
+        "./controller/HelloDialog",
+        "./controller/InvoiceList"
     ], function (UIComponent, JSONModel, HelloDialog) {
     "use strict";
 
@@ -26,6 +27,7 @@ sap.ui.define([
             // set dialog
             this.rootControlLoaded().then(function () {
                 this._helloDialog = new HelloDialog(this.getRootControl());
+                this._invoiceList = new InvoiceList(this.getRootControl());
             }.bind(this));
         },
         exit: function () {
