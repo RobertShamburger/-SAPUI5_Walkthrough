@@ -32,11 +32,22 @@
         "technology": "UI5"
     },
     "sap.ui5": {
+        "rootView": {
+            "id": "app",
+            "type": "XML",
+            "viewName": "sap.ui.demo.walkthrough.view.App"
+        },
         "dependencies": {
             "libs": {
                 "sap.m": {}
             },
             "minUI5Version": "1.90"
+        },
+        "resources": {
+            "css": [{
+                    "uri": "css/style.css"
+                }
+            ]
         },
         "models": {
             "i18n": {
@@ -51,32 +62,22 @@
                 "dataSource": "invoiceRemote"
             }
         },
-        "rootView": {
-            "id": "app",
-            "type": "XML",
-            "viewName": "sap.ui.demo.walkthrough.view.App"
-        },
         "routing": {
             "config": {
                 "routerClass": "sap.m.routing.Router",
-                "viewType": "XML"
+                "viewType": "XML",
                 "viewPath": "sap.ui.demo.walkthrough.view",
                 "controlId": "app",
-                "controlAggregation": "pages",
+                "controlAggregation": "pages"
             },
-            "resources": {
-                "css": [{
-                        "uri": "css/style.css"
-                    }
-                ]
-            },
+
             "routes": [{
                     "pattern": "",
                     "name": "overview",
                     "target": "overview"
                 }, {
-                    "pattern": "detail"
-                    "name": "detail",
+                    "pattern": "detail",
+                    "name": "detail"
                 }
             ],
             "targets": {
