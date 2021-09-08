@@ -1,6 +1,6 @@
 /*global QUnit, opaTest*/
 
-sap.unit.define([
+sap.ui.define([
     "sap/ui/demo/walkthrough/localService/mockserver",
     "sap/ui/test/opaQunit",
     "./pages/App"
