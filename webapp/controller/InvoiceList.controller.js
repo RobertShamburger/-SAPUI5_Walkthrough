@@ -1,21 +1,21 @@
 sap.ui.define([
-    "sap/ui/core/mvc/Controller",
-    "sap/ui/model/json/JSONModel",
-    "../model/formatter",
-    "sap/ui/model/Filter",
-    "sap/ui/model/FilterOperator"
-], function (Controller, JSONModel, formatter, Filter, FilterOperator ) {
+        "sap/ui/core/mvc/Controller",
+        "sap/ui/model/json/JSONModel",
+        "../model/formatter",
+        "sap/ui/model/Filter",
+        "sap/ui/model/FilterOperator"
+    ], function (Controller, JSONModel, formatter, Filter, FilterOperator) {
     "use strict";
     return Controller.extend("sap.ui.demo.walkthrough.controller.InvoiceList", {
         formatter: formatter,
-        onInit : function () {
+        onInit: function () {
             var oViewModel = new JSONModel({
                 currency: "EUR"
             });
             this.getView().setModel(oViewModel, "view");
         },
-        onFilterInvoices : function (oEvent) {
-            
+        onFilterInvoices: function (oEvent) {
+
             // build filter Array
             var aFilter = [];
             var sQuery = oEvent.getParameter("query");
@@ -28,8 +28,11 @@ sap.ui.define([
             oBinding.filter(aFilter);
         },
         onPress: function (oEvent) {
+            var oItem = oEvent.getSource();
             var oRouter = this.getOwnerComponent().getRouter();
-            oRouter.navTo("detail");
+            oRouter.navTo("detail", {
+                invoicePath: window.encodeURIComponent(oItem.getBindingContext("invoice").getPath().substr(1))
+            });
         }
     });
 });

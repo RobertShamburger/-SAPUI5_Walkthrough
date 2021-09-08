@@ -4,6 +4,7 @@
     <Page
         title="{i18n>detailPageTitle}">
         <ObjectHeader
-            title="Invoice"/>
+            intro="{invoice>ShipperName}"
+            title="{Invoice>ProductName}"/>
     </Page>
 </mvc:View>
