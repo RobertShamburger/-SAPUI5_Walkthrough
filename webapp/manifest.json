@@ -1,66 +1,67 @@
 {
     "_version": "1.21.0",
     "sap.app": {
+        "id": "sap.ui.demo.walkthrough",
+        "type": "application",
+        "i18n": {
+            "bundleUrl": "i18n/i18n.properties",
+            "supportedLocales": [""],
+
+            "fallbackLocale": ""
+        },
+        "title": "{{appTitle}}",
+        "description": "{{appDescription}}",
         "applicationVersion": {
             "version": "1.0.0"
         },
         "dataSources": {
             "invoiceRemote": {
+                "uri": "https://services.odata.org/V2/Northwind/Northwind.svc/",
+                "type": "OData",
                 "settings": {
                     "odataVersion": "2.0"
-                },
-                "type": "OData",
-                "uri": "https://services.odata.org/V2/Northwind/Northwind.svc/"
+                }
             }
-        },
-        "description": "{{appDescription}}",
-        "i18n": {
-            "bundleUrl": "i18n/i18n.properties",
-            "fallbackLocale": "",
-            "supportedLocales": [""]
-        },
-        "id": "sap.ui.demo.walkthrough",
-        "title": "{{appTitle}}",
-        "type": "application"
+        }
     },
     "sap.ui": {
+        "technology": "UI5",
         "deviceTypes": {
             "desktop": true,
-            "phone": true,
-            "tablet": true
-        },
-        "technology": "UI5"
+            "tablet": true,
+            "phone": true
+        }
     },
     "sap.ui5": {
         "rootView": {
-            "id": "app",
+            "viewName": "sap.ui.demo.walkthrough.view.App",
             "type": "XML",
-            "viewName": "sap.ui.demo.walkthrough.view.App"
+            "id": "app"
         },
         "dependencies": {
+            "minUI5Version": "1.90",
             "libs": {
                 "sap.m": {}
+            }
+        },
+        "models": {
+            "i18n": {
+                "type": "sap.ui.model.resource.ResourceModel",
+                "settings": {
+                    "bundleName": "sap.ui.demo.walkthrough.i18n.i18n",
+                    "supportedLocales": [""],
+                    "fallbackLocale": ""
+                }
             },
-            "minUI5Version": "1.90"
+            "invoice": {
+                "dataSource": "invoiceRemote"
+            }
         },
         "resources": {
             "css": [{
                     "uri": "css/style.css"
                 }
             ]
-        },
-        "models": {
-            "i18n": {
-                "settings": {
-                    "bundleName": "sap.ui.demo.walkthrough.i18n.i18n",
-                    "fallbackLocale": "",
-                    "supportedLocales": [""]
-                },
-                "type": "sap.ui.model.resource.ResourceModel"
-            },
-            "invoice": {
-                "dataSource": "invoiceRemote"
-            }
         },
         "routing": {
             "config": {
@@ -70,24 +71,24 @@
                 "controlId": "app",
                 "controlAggregation": "pages"
             },
-
             "routes": [{
                     "pattern": "",
                     "name": "overview",
                     "target": "overview"
                 }, {
-                    "pattern": "detail",
-                    "name": "detail"
+                    "pattern": "detail/{invoicePath}",
+                    "name": "detail",
+                    "target": "detail"
                 }
             ],
             "targets": {
-                "detail": {
-                    "viewId": "detail",
-                    "viewName": "Detail"
-                },
                 "overview": {
                     "viewId": "overview",
                     "viewName": "Overview"
+                },
+                "detail": {
+                    "viewId": "detail",
+                    "viewName": "Detail"
                 }
             }
         }
