@@ -1,8 +1,8 @@
 sap.ui.define([
-        "sap/ui/core/mvc/Controller",
-        "sap/ui/core/routing/History",
-        "sap/m/MessageToast"
-    ], function (Controller, History, MessageToast) {
+    "sap/ui/core/mvc/Controller",
+    "sap/ui/core/routing/History",
+    "sap/m/MessageToast"
+], function (Controller, History, MessageToast) {
     "use strict";
     return Controller.extend("sap.ui.demo.walkthrough.controller.Detail", {
         onInit: function () {
@@ -32,5 +32,6 @@ sap.ui.define([
             var oResourceBundle = this.getView().getModel("i18n").getResourceBundle();
 
             MessageToast.show(oResourceBundle.getText("ratingConfirmation", [fValue]));
-        });
+        }
     });
+});
