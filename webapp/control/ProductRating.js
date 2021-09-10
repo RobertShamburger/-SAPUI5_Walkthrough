@@ -6,36 +6,34 @@ sap.ui.define([
 ], function (Control, RatingIndicator, Label, Button) {
     "use strict";
     return Control.extend("sap.ui.demo.walkthrough.control.ProductRating", {
-        metadata: {
+        metadata : {
             properties: {
                 value: {
                     type: "float",
-                    defaultValue: 0
+                    defaultValue : 0
                 }
             },
-            aggregations: {
-                _rating: {
-                    type: "sap.m.RatingIndicator",
-                    multiple: false,
-                    visibility: "hidden"
+            aggregations : {
+                _rating : {
+                    type : "sap.m.RatingIndicator",
+                    multiple : false,
+                    visibility : "hidden"
                 },
-                _label: {
-                    type: "sap.m.Label",
-                    multiple: false,
-                    visibility: "hidden"
+                _label : {
+                    type : "sap.m.Label",
+                    multiple : false,
+                    visibility : "hidden"
                 },
-                _button: {
-                    type: "sap.m.Button",
-                    multiple: false,
-                    visibility: "hidden"
+                _button : {
+                    type : "sap.m.Button",
+                    multiple : false,
+                    visibility : "hidden"
                 }
             },
-            events: {
-                change: {
-                    parameters: {
-                        value: {
-                            type: "int"
-                        }
+            events : {
+                change : {
+                    parameters : {
+                        value : { type: "int" }
                     }
                 }
             }
