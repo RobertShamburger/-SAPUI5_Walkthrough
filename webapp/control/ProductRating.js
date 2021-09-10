@@ -1,9 +1,9 @@
 sap.ui.define([
-        "sap/ui/core/Control",
-        "sap/m/RatingIndicator",
-        "sap/m/Label",
-        "sap/m/Button"
-    ], function (Control, RatingIndicator, Label, Button) {
+    "sap/ui/core/Control",
+    "sap/m/RatingIndicator",
+    "sap/m/Label",
+    "sap/m/Button"
+], function (Control, RatingIndicator, Label, Button) {
     "use strict";
     return Control.extend("sap.ui.demo.walkthrough.control.ProductRating", {
         metadata: {
@@ -42,18 +42,18 @@ sap.ui.define([
         },
         init: function () {
             this.setAggregation("_rating", new RatingIndicator({
-                    value: this.getValue(),
-                    iconSize: "2rem",
-                    visualMode: "Half",
-                    liveChange: this._onRate.bind(this)
-                }));
-            this.setAggregation("_label", new Label({
-                    text: "{i18n>productRatingLabelInitial}"
-                }).addStyleClass("sapUiSmallMargin"));
-            this.setAggregation("_button", new Button({
-                    text: "{i18n>productRatingButton}",
-                    press: this._onSubmit.bind(this)
-                }).addStyleClass("sapUiTinyMarginTopBottom"));
+                value: this.getValue(),
+                iconSize: "2rem",
+                visualMode: "Half",
+                liveChange: this._onRate.bind(this)
+            }));
+        this.setAggregation("_label", new Label({
+                text: "{i18n>productRatingLabelInitial}"
+            }).addStyleClass("sapUiSmallMargin"));
+        this.setAggregation("_button", new Button({
+                text: "{i18n>productRatingButton}",
+                press: this._onSubmit.bind(this)
+            }).addStyleClass("sapUiTinyMarginTopBottom"));
         },
 
         setValue: function (fValue) {
@@ -99,5 +99,5 @@ sap.ui.define([
             oRm.renderControl(oControl.getAggregation("_button"));
             oRm.close("div");
         }
-    }),
-}),
+    });
+});
