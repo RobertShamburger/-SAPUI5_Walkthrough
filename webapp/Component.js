@@ -23,13 +23,14 @@ sap.ui.define([
             };
             var oModel = new JSONModel(oData);
             this.setModel(oModel);
-            
+
             this.rootControlLoaded().then(function () {
                 // set dialog
                 this._helloDialog = new HelloDialog(this.getRootControl());
-                // create the views based on the url/hash
-                this.getRouter().initialize();
             }.bind(this));
+
+            // create the views based on the url/hash
+            this.getRouter().initialize();
         },
         exit: function () {
             this._helloDialog.destroy();
