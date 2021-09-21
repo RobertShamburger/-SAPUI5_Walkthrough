@@ -11,7 +11,7 @@ sap.ui.define([
         metadata: {
             manifest: "json"
         },
-
+//---------------------------------------------------------------------
         init: function () {
             // call the init function of the parent
             UIComponent.prototype.init.apply(this, arguments);
@@ -40,10 +40,23 @@ sap.ui.define([
             // create the views based on the url/hash
             this.getRouter().initialize();
         },
+//---------------------------------------------------------------------
+        getContentDensityClass : function () {
+            if (!this._sContentDensityClass) {
+                if (!Device.support.touch) {
+                    this._sContentDensityClass = "sapUiSizeCompact";
+                } else {
+                    this._sContentDensityClass = "sapUiSizeCozy";
+                }
+            }
+            return this._sContentDensityClass;
+        },
+//---------------------------------------------------------------------
         exit: function () {
             this._helloDialog.destroy();
             delete this._helloDialog;
         },
+//---------------------------------------------------------------------
         openHelloDialog: function () {
             this._helloDialog.open();
         }
