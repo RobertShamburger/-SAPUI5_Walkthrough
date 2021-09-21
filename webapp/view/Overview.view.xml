@@ -6,11 +6,11 @@
         <landmarkInfo>
             <PageAccessibleLandmarkInfo
                 rootRole="Region"
-                rootLable="{i18n>Overview_rootLable}"
+                rootLabel="{i18n>Overview_rootLabel}"
                 contentRole="Main"
-                contentLable="{i18n>Overview_contentLable}"
+                contentLabel="{i18n>Overview_contentLabel}"
                 headerRole="Banner"
-                headerLable="{i18n>Overview_headerLable}"/>
+                headerLabel="{i18n>Overview_headerLabel}"/>
         </landmarkInfo>
         <headerContent>
             <Button
