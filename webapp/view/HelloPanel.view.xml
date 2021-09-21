@@ -7,14 +7,14 @@
         class="sapUiResponsiveMargin"
         width="auto"
         expandable="{device>/system/phone}"
-        expanded="{= !${device>system/phone} }">
+        expanded="{= !${device>/system/phone} }">
         <content>
             <Button
                 id="helloDialogButton"
                 icon="sap-icon://world"
                 text="{i18n>openDialogButtonText}"
                 press=".onOpenDialog"
-                class="sapUiSmallMarginEnd sapUiVisibileOnlyOnDesktop"/>
+                class="sapUiSmallMarginEnd sapUiVisibleOnlyOnDesktop"/>
             <Button
                 icon="sap-icon://theater"
                 text="{i18n>showHelloButtonText}"
