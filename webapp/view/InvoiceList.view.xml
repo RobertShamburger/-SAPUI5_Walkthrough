@@ -7,7 +7,10 @@
                 <Title text="{i18n>invoiceListTitle}"/>
                 <ToolbarSpacer/>
                 <SearchField width="30%"
-                             search=".onFilterInvoices"/>
+                             search=".onFilterInvoices"
+                             ariaLabelledBy="searchFieldLabel"
+                             ariaDescribedBy="searchFieldDescription"
+                             placeholder="{i18n>searchFieldPlaceholder}"/>
             </Toolbar>
         </headerToolbar>
         <Table id="invoiceList"
