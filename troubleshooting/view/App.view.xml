@@ -33,7 +33,7 @@
 								text="{i18n>doSomething}"
 								press=".onPress"
 								type="Emphasized"
-                                class="sapUiMarginLarge"/>
+                                class="sapUiLargeMargin"/>
 							<Label
 								id="LabelWithMissingI18NText"
 								text="{i18n>Label_Missing_I18N_Text}"/>
