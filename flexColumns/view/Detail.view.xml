@@ -11,6 +11,21 @@
         preserveHeaderStateOnScroll="false"
         headerContentPinnable="true"
         isChildPage="true"
-        upperCaseAnchorBar="false"
+        upperCaseAnchorBar="false">
+        <headerTitle>
+            <ObjectPageDynamicHeaderTitle>
+                <actions>
+                    <m:ToggleButton
+                        text="Edit"
+                        type="Emphasized" />
+                    <m:Button
+                        text="Copy"
+                        type="Transparent" />
+                    <m:Button
+                        icon="sap-icon://action"
+                        type="Transparent" />
+                </actions>
+            </ObjectPageDynamicHeaderTitle>
+        </headerTitle>
     </ObjectPageLayout>
 </mvc:View>
