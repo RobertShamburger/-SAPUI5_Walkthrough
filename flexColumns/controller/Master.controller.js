@@ -40,7 +40,7 @@ sap.ui.define([
         
         onListItemPress: function () {
             var oFCL = this.oView.getParent().getParent();
-            oFCL.setLayout(fioriLibrary.LayoutTypeTwoColumnsMidExpanded);
+            oFCL.setLayout(fioriLibrary.LayoutType.TwoColumnsMidExpanded);
         }
         
     });
