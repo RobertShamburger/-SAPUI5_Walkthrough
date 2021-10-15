@@ -9,31 +9,31 @@ sap.ui.define([
     ], function (JSONModel, Controller, Filter, FilterOperator, Sorter, MessageBox, fioriLibrary) {
     " use strict ";
 
-    return Controller.extend("sap.ui.demo.fiori2.controller.Master ", {
+    return Controller.extend("sap.ui.demo.fiori2.controller.Master", {
         onInit: function () {
             this.oView = this.getView();
             this._bDescendignSort = false;
-            this.oProductsTable = this.oView.byId(" productsTable ");
+            this.oProductsTable = this.oView.byId("productsTable");
         },
 
-        onSearch: fuction(oEvent) {
+        onSearch: function(oEvent) {
             var oTableSearchState = [],
-            sQuery = oEvent.getParameter(" query ");
+            sQuery = oEvent.getParameter("query");
 
             if (sQuery && sQuery.length > 0) {
-                oTableSearchState = [new Filter(" Name ", FilterOperator.Contains, sQuery)];
+                oTableSearchState = [new Filter("Name", FilterOperator.Contains, sQuery)];
             }
-            this.oProductsTable.getBinding("items").filter(oTableSearchState, " Application ");
+            this.oProductsTable.getBinding("items").filter(oTableSearchState, "Application");
         },
         onAdd: function () {
-            MessageBox.information(" This functionality is not ready yet.", {
-                title: " Aw, Shucks!"
+            MessageBox.information("This functionality is not ready yet.", {
+                title: "Aw, Shucks!"
             });
         },
         onSort: function () {
-            this._bDescendignSort = !this._bDescendignSort;
-            var oBinding = this.oProductsTable.getBinding(" items "),
-            oSorter = new Sorter(" Name ", this._bDescendignSort);
+            this._bDescendingSort = !this._bDescendingSort;
+            var oBinding = this.oProductsTable.getBinding("items"),
+            oSorter = new Sorter("Name", this._bDescendingSort);
 
             oBinding.sort(oSorter);
         },
