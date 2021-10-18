@@ -13,8 +13,8 @@ sap.ui.define([
 
         init: function () {
             var oModel,
-            oProductsModel,
-            oRouter;
+                oProductsModel,
+                oRouter;
 
             UIComponent.prototype.init.apply(this, arguments);
             oModel = new JSONModel();
