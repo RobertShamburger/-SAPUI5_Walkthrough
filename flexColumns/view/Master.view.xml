@@ -29,7 +29,7 @@
                     items="{
                         path: 'products>/ProductsCollections',
                         sorter: {
-                            patch: 'Name'
+                            path: 'Name'
                             }
                         }"
                     class="sapFDynamicPageAlignContent"
@@ -52,7 +52,7 @@
                                             {path: 'products>Price'},
                                             {path: 'products>CurrencyCode'}
                                             ],
-                                        type: 'sap.ui.model.type.Currency', formatOptions: {showMeasure: 'false'}
+                                        type: 'sap.ui.model.type.Currency', formatOptions: {showMeasure: false}
                                     }"
                                     unit="{products>CurrencyCode}"/>
                             </cells>
