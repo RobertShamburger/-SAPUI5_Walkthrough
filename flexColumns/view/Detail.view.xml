@@ -43,7 +43,6 @@
                 </m:VBox>
             </m:FlexBox>
         </headerContent>
-        
         <sections>
             <ObjectPageSection title="General Information">
                 <subSections>
@@ -68,7 +67,6 @@
                     </ObjectPageSubSection>
                 </subSections>
             </ObjectPageSection>
-          
             <ObjectPageSection title="Suppliers">
                 <subSections>
                     <ObjectPageSubSection>
@@ -90,7 +88,6 @@
                     </ObjectPageSubSection>
                 </subSections>
             </ObjectPageSection>
-      
-        </sections> 
+        </sections>
     </ObjectPageLayout>
 </mvc:View>
