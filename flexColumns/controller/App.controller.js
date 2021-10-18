@@ -20,7 +20,7 @@ sap.ui.define([
         },
         
         onStateChanged: function (oEvent) {
-            var bIsNavigationArrow = oEvent.getParameter("isNavigationArrow),
+            var bIsNavigationArrow = oEvent.getParameter("isNavigationArrow"),
                 sLayout = oEvent.getParameter("layout");
                 
             // Replace the URL with the new layout if a navigation arrow was used
