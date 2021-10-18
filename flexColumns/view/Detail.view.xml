@@ -74,7 +74,7 @@
                             <m:Table id="suppliersTable"
                                      items="{path : 'products>/ProductCollectionStats/Filters/1/values'}">
                                 <m:columns>
-                                    <m:columns/>
+                                    <m:Column/>
                                 </m:columns>
                                 <m:items>
                                     <m:ColumnListItem type="Navigation">
