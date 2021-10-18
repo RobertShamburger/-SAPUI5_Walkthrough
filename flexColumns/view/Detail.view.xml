@@ -22,7 +22,7 @@
                 </actions>
             </ObjectPageDynamicHeaderTitle>
         </headerTitle>
-        <headerContent>
+  <!--      <headerContent>
             <m:FlexBox wrap="Wrap"
                        fitContainer="true"
                        alignItems="Stretch">
@@ -88,6 +88,7 @@
                     </ObjectPageSubSection>
                 </subSections>
             </ObjectPageSection>
-        </sections>
+        </sections> 
+        -->
     </ObjectPageLayout>
 </mvc:View>
