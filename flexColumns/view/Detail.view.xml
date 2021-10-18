@@ -68,7 +68,7 @@
                     </ObjectPageSubSection>
                 </subSections>
             </ObjectPageSection>
-            <!--
+          
             <ObjectPageSection title="Suppliers">
                 <subSections>
                     <ObjectPageSubSection>
@@ -90,7 +90,7 @@
                     </ObjectPageSubSection>
                 </subSections>
             </ObjectPageSection>
-        -->
+      
         </sections> 
     </ObjectPageLayout>
 </mvc:View>
