@@ -22,7 +22,7 @@
                 </actions>
             </ObjectPageDynamicHeaderTitle>
         </headerTitle>
-  <!--      <headerContent>
+        <headerContent>
             <m:FlexBox wrap="Wrap"
                        fitContainer="true"
                        alignItems="Stretch">
@@ -43,6 +43,7 @@
                 </m:VBox>
             </m:FlexBox>
         </headerContent>
+        <!--
         <sections>
             <ObjectPageSection title="General Information">
                 <subSections>
