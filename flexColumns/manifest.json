@@ -39,7 +39,7 @@
                 "async": true
             },
             "routes": [{
-                    "pattern": ":layout",
+                    "pattern": ":layout:",
                     "name": "master",
                     "target": [
                         "master",
@@ -51,19 +51,20 @@
                     "target": [
                         "master",
                         "detail"
-                    ],
-                    "targets": {
-                        "master": {
-                            "viewName": "Master",
-                            "controlAggregation": "beginColumnPages"
-                        },
-                        "detail": {
-                            "viewName": "Detail",
-                            "controlAggregation": "midColumnPages"
-                        }
-                    }
+                    ]
                 }
-
+            ],
+            "targets": {
+                "master": {
+                    "viewName": "Master",
+                    "controlAggregation": "beginColumnPages"
+                },
+                "detail": {
+                    "viewName": "Detail",
+                    "controlAggregation": "midColumnPages"
+                }
             }
         }
+
     }
+}
