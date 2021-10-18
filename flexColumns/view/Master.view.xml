@@ -27,7 +27,7 @@
                     id="productsTable"
                     inset="false"
                     items="{
-                        path: 'products>/ProductsCollections',
+                        path: 'products>/ProductCollection',
                         sorter: {
                             path: 'Name'
                             }
