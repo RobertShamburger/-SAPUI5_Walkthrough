@@ -79,7 +79,7 @@
                                 <m:items>
                                     <m:ColumnListItem type="Navigation">
                                         <m:cells>
-                                            <m:ObjectIdentifier text="{products>text>"/>
+                                            <m:ObjectIdentifier text="{products>text}"/>
                                         </m:cells>
                                     </m:ColumnListItem>
                                 </m:items>
