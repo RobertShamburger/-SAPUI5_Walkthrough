@@ -11,7 +11,7 @@ sap.ui.require([
             firstName: "Mike",
             lastName: "Hawk",
             enabled: true,
-            panelHeaderText: "Data Binding Basics"
+            panelHeaderText: "Data Binding Basics",
             greetingText: "Hi, my name is Mike Hawk"
         });
         // Assign the model object to the SAPUI5 core
