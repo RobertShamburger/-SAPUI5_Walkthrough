@@ -1,6 +1,7 @@
 sap.ui.require([
-	"sap/m/Text"
-], function (Text) {
+	"sap/m/Text",
+    "sap/ui/model/json/JSONModel"
+], function (Text, JSONModel) {
 	"use strict";
 
 	// Attach an anonymous function to the SAPUI5 'init' event
