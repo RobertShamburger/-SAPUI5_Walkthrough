@@ -12,7 +12,7 @@ sap.ui.require([
             firstName: "Mike",
             lastName: "Hawk",
             enabled: true,
-            adress: {
+            address: {
                 street: "Guy-Fiery-Boulevard 420",
                 city: "Flavour Town",
                 zip: "696969",
