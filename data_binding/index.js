@@ -20,6 +20,7 @@ sap.ui.require([
         // * "" - i18n/i18n.properties
         // the configured fallbackLocale should represent one of these files
         // * "" - according to the fallback chain the root bundle is the last fallback.
+        // which means that if the "de" was requested here, the root bundle would never be loaded.
         // Configuring it explicitly avoids side effects when additional resource files are added.
         
         // oModel.setDefaultBindingMode(BindingMode.OneWay);
