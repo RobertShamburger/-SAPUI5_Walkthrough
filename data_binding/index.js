@@ -17,7 +17,7 @@ sap.ui.require([
         sap.ui.getCore().setModel(oModel);
         // Display the XML view called "App"
        new XMLView({
-           viewName: "sap.ui.demo.data_binding"
+           viewName: "sap.ui.demo.data_binding.view.App"
        }).placeAt("content");
     });
 });
