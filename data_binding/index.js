@@ -17,6 +17,7 @@ sap.ui.require([
                 city: "Flavour Town",
                 zip: "696969",
                 country: "Heaven"
+            }
         });
         // Assign the model object to the SAPUI5 core
         sap.ui.getCore().setModel(oModel);
