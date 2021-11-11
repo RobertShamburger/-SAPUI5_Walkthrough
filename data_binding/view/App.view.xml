@@ -33,14 +33,30 @@
                                htmlText="{/address/street}&lt;br&gt;{/address/zip} {/address/city}&lt;br&gt;{/address/country}"
                                id="address"
                                width="200px"/>
-               <Link href="{
+                <Link href="{
                     parts: [
                     '/firstName',
                     '/lastName'
                     ],
                     formatter: '.formatMail'
                 }"
-                text="{i18n>sendEmail}"/>
+                      text="{i18n>sendEmail}"/>
+            </l:VerticalLayout>
+            <l:VerticalLayout>
+                <Label labelFor="salesAmount"
+                       text="{i18n>salesAmount}:"/>
+                <Input description="{/currencyCode}"
+                       enabled="{/enabled}"
+                       id="salesAmount"
+                       value="{
+                    parts: [
+                    {path: '/salesAmount'},
+                    {path: '/currencyCode'}
+                    ],
+                    type: 'sap.ui.model.type.Currency',
+                    formatOptions: {showMeasure: false}
+                    }"
+                       width="200p"/>
             </l:VerticalLayout>
         </content>
     </Panel>
