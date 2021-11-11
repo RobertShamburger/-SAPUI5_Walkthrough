@@ -1,5 +1,5 @@
 <mvc:View controllerName="sap.ui.demo.data_binding.controller.App"
-xmlns="sap.m"
+          xmlns="sap.m"
           xmlns:form="sap.ui.layout.form"
           xmlns:l="sap.ui.layout"
           xmlns:mvc="sap.ui.core.mvc">
@@ -22,14 +22,25 @@ xmlns="sap.m"
             <CheckBox selected="{/enabled}"/>
         </form:SimpleForm>
     </Panel>
-    <Panel headerText="{i18n>panel2HeaderText}" class="sapUiResponsiveMargin" width="auto">
+    <Panel headerText="{i18n>panel2HeaderText}"
+           class="sapUiResponsiveMargin"
+           width="auto">
         <content>
             <l:VerticalLayout>
-                <Label labelFor="address" text="{i18n>address}:"/>
+                <Label labelFor="address"
+                       text="{i18n>address}:"/>
                 <FormattedText class="sapUiSmallMarginBottom"
-                htmlText="{/address/street}&lt;br&gt;{/address/zip} {/address/city}&lt;br&gt;{/address/country}"
-                id="address"
-                width="200px"/>
+                               htmlText="{/address/street}&lt;br&gt;{/address/zip} {/address/city}&lt;br&gt;{/address/country}"
+                               id="address"
+                               width="200px"/>
+               <Link href="{
+                    parts: [
+                    '/firstName',
+                    '/lastName'
+                    ],
+                    formatter: '.formatMail'
+                }"
+                text="{i18n>sendEmail}"/>
             </l:VerticalLayout>
         </content>
     </Panel>
