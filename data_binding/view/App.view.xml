@@ -1,4 +1,5 @@
-<mvc:View xmlns="sap.m"
+<mvc:View controllerName="sap.ui.demo.data_binding.controller.App"
+xmlns="sap.m"
           xmlns:form="sap.ui.layout.form"
           xmlns:l="sap.ui.layout"
           xmlns:mvc="sap.ui.core.mvc">
