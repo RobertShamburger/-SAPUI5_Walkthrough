@@ -1,8 +1,8 @@
 sap.ui.require([
     "sap/ui/model/json/JSONModel",
     "sap/ui/core/mvc/XMLView",
-    "sap/ui/model/BindingMode"
-], function (JSONModel, XMLView, BindingMode) {
+    "sap/ui/model/resource/ResourceModel"
+], function (JSONModel, XMLView, ResourceModel) {
     "use strict";
 
     // Attach an anonymous function to the SAPUI5 'init' event
