@@ -16,9 +16,8 @@ sap.ui.require([
         // Assign the model object to the SAPUI5 core
         sap.ui.getCore().setModel(oModel);
         // Display the XML view called "App"
-        var oView = new XMLView({
-            viewName: "sap.ui.demo.data_binding.view.App"
-        });
-        oView.placeAt("content");
+       new XMLView({
+           viewName: "sap.ui.demo.db.view.App"
+       }).placeAt("content");
     });
 });
