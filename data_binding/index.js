@@ -1,8 +1,8 @@
 sap.ui.require([
-    "sap/ui/model/json/JSONModel",
-    "sap/ui/core/mvc/XMLView",
-    "sap/ui/model/resource/ResourceModel"
-], function (JSONModel, XMLView, ResourceModel) {
+        "sap/ui/model/json/JSONModel",
+        "sap/ui/core/mvc/XMLView",
+        "sap/ui/model/resource/ResourceModel"
+    ], function (JSONModel, XMLView, ResourceModel) {
     "use strict";
 
     // Attach an anonymous function to the SAPUI5 'init' event
@@ -30,20 +30,20 @@ sap.ui.require([
         // * "" - according to the fallback chain the root bundle is the last fallback.
         // which means that if the "de" was requested here, the root bundle would never be loaded.
         // Configuring it explicitly avoids side effects when additional resource files are added.
-        
+
         // oModel.setDefaultBindingMode(BindingMode.OneWay);
-        
+
         var oResourceModel = new ResourceModel({
             bundleName: "sap.ui.demo.data_binding.i18n.i18n",
             supportedLocales: ["", "de"],
             fallbackLocale: ""
         });
-                
+
         // Assign the model object to the SAPUI5 core
         sap.ui.getCore().setModel(oResourceModel, "i18n");
         // Display the XML view called "App"
-       new XMLView({
-           viewName: "sap.ui.demo.data_binding.view.App"
-       }).placeAt("content");
+        new XMLView({
+            viewName: "sap.ui.demo.data_binding.view.App"
+        }).placeAt("content");
     });
 });
