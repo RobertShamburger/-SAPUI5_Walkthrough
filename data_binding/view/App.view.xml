@@ -106,8 +106,7 @@
                     </attributes>
                 </ObjectListItem>
             </items>
-        </List>
-    </Panel>
+     </Panel>
     <Panel id="productDetailsPanel" headerText="{i18n>panel4HeaderText}" class="sapUiResponsiveMargin" width="auto">
         <form:SimpleForm editable="true" layout="ColumnLayout">
             <Label text="{i18n>ProductID}"/>
