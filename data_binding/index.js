@@ -22,6 +22,7 @@ sap.ui.require([
                 country: "Heaven"
             },
             salesAmount: 69420.789,
+            priceThreshold: 20,
             currencyCode: "EUR"
         });
         // Assign the model object to the SAPUI5 core
