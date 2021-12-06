@@ -37,7 +37,7 @@ sap.ui.define([
             if (oContext.getProperty("UnitsInStock") === 0 && oContext.getProperty("Discontinued")) {
                 // The item is discontinued so use a StandardListItem
                 oUIControl = this.byId("productExtended").clone(sId);
-                
+            } else {
                 // The item is temporarily out of stock, so we will add a status
                 if (oContext.getProperty("UnitsInStock") < 1 ) {
                     oUIControl.addAttribute(new ObjectAttribute({
