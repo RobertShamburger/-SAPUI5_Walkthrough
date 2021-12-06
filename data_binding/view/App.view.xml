@@ -72,17 +72,18 @@
               path: 'products>/Products',
               factory: '.productListFactory'
               }">
-              <dependents>
-                <core:Fragment fragmentName="sap.ui.demo.data_binding.view.ProductSimple" type="XML"/>
-                <core:Fragment fragmentName="sap.ui.demo.data_binding.view.ProductExtended" type="XML"/>
-              </dependents>
-          </List>
-            <items>
-                <ObjectListItem 
-                                press=".onItemSelected"
-                                type="Active"
-                                title="{products>ProductName}"
-                                number="{
+            <dependents>
+                <core:Fragment fragmentName="sap.ui.demo.data_binding.view.ProductSimple"
+                               type="XML"/>
+                <core:Fragment fragmentName="sap.ui.demo.data_binding.view.ProductExtended"
+                               type="XML"/>
+            </dependents>
+        </List>
+        <items>
+            <ObjectListItem press=".onItemSelected"
+                            type="Active"
+                            title="{products>ProductName}"
+                            number="{
                     parts: [
                         {path: 'products>UnitPrice'},
                         {path: '/currencyCode'}
@@ -90,12 +91,12 @@
                     type: 'sap.ui.model.type.Currency',
                     formatOptions: { showMeasure: false }
                 }"
-                                numberUnit="{/currencyCode}"
-                                numberState="{= ${products>UnitPrice} &gt; ${/priceThreshold} ? 'Error' : 'Success' }">
-                    <attributes>
-                        <ObjectAttribute text="{products>QuantityPerUnit}"/>
-                        <ObjectAttribute title="{i18n>stockValue}"
-                                         text="{
+                            numberUnit="{/currencyCode}"
+                            numberState="{= ${products>UnitPrice} &gt; ${/priceThreshold} ? 'Error' : 'Success' }">
+                <attributes>
+                    <ObjectAttribute text="{products>QuantityPerUnit}"/>
+                    <ObjectAttribute title="{i18n>stockValue}"
+                                     text="{
                             parts: [
                                 {path: 'products>UnitPrice'},
                                 {path: 'products>UnitsInStock'},
@@ -103,27 +104,26 @@
                             ],
                             formatter: '.formatStockValue'
                         }"/>
-                    </attributes>
-                </ObjectListItem>
-            </items>
-     </Panel>
-    <Panel id="productDetailsPanel" headerText="{i18n>panel4HeaderText}" class="sapUiResponsiveMargin" width="auto">
-        <form:SimpleForm editable="true" layout="ColumnLayout">
+                </attributes>
+            </ObjectListItem>
+        </items>
+    </Panel>
+    <Panel id="productDetailsPanel"
+           headerText="{i18n>panel4HeaderText}"
+           class="sapUiResponsiveMargin"
+           width="auto">
+        <form:SimpleForm editable="true"
+                         layout="ColumnLayout">
             <Label text="{i18n>ProductID}"/>
             <Input value="{products>ProductID}"/>
-            
             <Label text="{i18n>ProductName}"/>
             <Input value="{products>ProductName}"/>
-            
             <Label text="{i18n>QuantityPerUnit}"/>
             <Input value="{products>QuantityPerUnit}"/>
-            
             <Label text="{i18n>UnitPrice}"/>
             <Input value="{products>UnitPrice}"/>
-            
             <Label text="{i18n>UnitsInStock}"/>
             <Input value="{products>UnitsInStock}"/>
-            
             <Label text="{i18n>Discontinued}"/>
             <Input value="{products>Discontinued}"/>
         </form:SimpleForm>

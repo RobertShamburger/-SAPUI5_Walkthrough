@@ -36,8 +36,11 @@ sap.ui.define([
             // Decide based on the data which dependant to cloneNode
             if (oContext.getProperty("UnitsInStock") === 0 && oContext.getProperty("Discontinued")) {
                 // The item is discontinued so use a StandardListItem
-                oUIControl = this.byId("productExtended").clone(sId);
+                oUIControl = this.byId("productSimple").clone(sId);
             } else {
+                // The item is available, so we will create on ObjectListItem
+                oUIControl = this.byId("productExtended").clone.(sId);
+                
                 // The item is temporarily out of stock, so we will add a status
                 if (oContext.getProperty("UnitsInStock") < 1 ) {
                     oUIControl.addAttribute(new ObjectAttribute({
