@@ -1,5 +1,6 @@
 <mvc:View controllerName="sap.ui.demo.data_binding.controller.App"
           xmlns="sap.m"
+          xmlns:core="sap.ui.core"
           xmlns:form="sap.ui.layout.form"
           xmlns:l="sap.ui.layout"
           xmlns:mvc="sap.ui.core.mvc">
@@ -65,8 +66,17 @@
     <Panel headerText="{i18n>panel3HeaderText}"
            class="sapUiResponsiveMargin"
            width="auto">
-        <List headerText="{i18n>productListTitle}"
-              items="{products>/Products}">
+        <List id="ProductList"
+              headerText="{i18n>productListTitle}"
+              items="{
+              path: 'products>/Products',
+              factory: 'productListFactory'
+              }">
+              <dependants>
+                <core:Fragment fragmentName="sap.ui.demo.db.view.ProductSimple" type="XML"/>
+                <core:Fragment fragmentName="sap.ui.demo.db.view.ProductExtended" type="XML"/>
+              </dependants>
+          </List>
             <items>
                 <ObjectListItem 
                                 press=".onItemSelected"
