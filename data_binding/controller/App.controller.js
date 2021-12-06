@@ -29,7 +29,8 @@ sap.ui.define([
             var sPath = oContext.getPath();
             var oProductDetailPanel = this.byId("productDetailsPanel");
             oProductDetailPanel.bindElement({ path: sPath, model: "products" });
-        },
+        }
+        /*,
         productListFactory: function(sId, oContext) {
             var oUIControl;
             
@@ -51,6 +52,6 @@ sap.ui.define([
                 }
             }
             return oUIControl;
-        }
+        }*/
     });
 });
