@@ -73,8 +73,8 @@
               factory: '.productListFactory'
               }">
               <dependents>
-                <core:Fragment fragmentName="sap.ui.demo.db.view.ProductSimple" type="XML"/>
-                <core:Fragment fragmentName="sap.ui.demo.db.view.ProductExtended" type="XML"/>
+                <core:Fragment fragmentName="sap.ui.demo.data_binding.view.ProductSimple" type="XML"/>
+                <core:Fragment fragmentName="sap.ui.demo.data_binding.view.ProductExtended" type="XML"/>
               </dependents>
           </List>
             <items>
