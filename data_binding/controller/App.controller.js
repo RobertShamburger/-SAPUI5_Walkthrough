@@ -26,7 +26,7 @@ sap.ui.define([
             var oSelectedItem = oEvent.getSource();
             var oContext = oSelectedItem.getBindingContext("products");
             var sPath = oContext.getPath();
-            var oProductDetailPanel = this.byID("productDetailPanel");
+            var oProductDetailPanel = this.byId("productDetailPanel");
             oProductDetailPanel.bindElement({ path: sPath, model: "products" });
         }
     });
