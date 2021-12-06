@@ -39,7 +39,7 @@ sap.ui.define([
                 oUIControl = this.byId("productSimple").clone(sId);
             } else {
                 // The item is available, so we will create on ObjectListItem
-                oUIControl = this.byId("productExtended").clone.(sId);
+                oUIControl = this.byId("productExtended").clone(sId);
                 
                 // The item is temporarily out of stock, so we will add a status
                 if (oContext.getProperty("UnitsInStock") < 1 ) {
