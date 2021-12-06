@@ -39,7 +39,7 @@ sap.ui.define([
                 oUIControl = this.byId("productExtended").clone(sId);
                 
                 // The item is temporarily out of stock, so we will add a status
-                if (oContext.getProperty("UnitsInStoc") < 1 ) {
+                if (oContext.getProperty("UnitsInStock") < 1 ) {
                     oUIControl.addAttribute(new ObjectAttribute({
                         text : {
                             path: "i18n>outOfStock"
