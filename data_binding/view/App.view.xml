@@ -79,7 +79,7 @@
                                type="XML"/>
             </dependents>
         </List>
-        <items>
+        <!-- <items>
             <ObjectListItem press=".onItemSelected"
                             type="Active"
                             title="{products>ProductName}"
@@ -106,7 +106,7 @@
                         }"/>
                 </attributes>
             </ObjectListItem>
-        </items>
+        </items> -->
     </Panel>
     <Panel id="productDetailsPanel"
            headerText="{i18n>panel4HeaderText}"
