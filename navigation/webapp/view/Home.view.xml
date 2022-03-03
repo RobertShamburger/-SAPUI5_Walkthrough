@@ -9,7 +9,9 @@
 	>
 		<content>
 			<Button
-				text="{i18n>iWantToNavigate}"
+				id="displayNotFoundBtn"
+				text="{i18n>DisplayNotFound}"
+				press=".onDisplayNotFound"
 				class="sapUiTinyMarginEnd"
 			/>
 		</content>
