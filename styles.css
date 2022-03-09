@@ -2,5 +2,7 @@ p.link {
     width: 20em;
     height: 2em;
     margin: 1em;
+    text-align: left;
+    vertical-align: middle;
     background-color: #ccc;
 }
